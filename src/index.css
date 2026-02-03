@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .comet-container {
+    background: #080808;
+  }
+  
+  .comet-glow {
+    position: absolute;
+    width: 250%;
+    height: 250%;
+    background: conic-gradient(from 0deg, transparent 300deg, #22d3ee 330deg, #fff 360deg);
+    top: -75%;
+    left: -75%;
+    animation: rotate-glow 4s linear infinite;
+  }
+
+  @keyframes rotate-glow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  /* Custom Scrollbar for sleek UI */
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: #020202; }
+  ::-webkit-scrollbar-thumb { background: #22d3ee33; border-radius: 10px; }
+}
